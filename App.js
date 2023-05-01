@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, FlatList } from 'react-native';
 import React, { useState } from 'react';
 import Header from './components/header';
 import ToDoItem from './components/todoitem';
@@ -15,7 +15,7 @@ const App = () => {
     setTasks((prevTasks) => { return prevTasks.filter(todo => todo.key != key) })
   }
   const handleSubmit = (text) => {
-    setTasks((prevTasks) =>{ return [{ text: text, key: Math.random().toString() }, ...prevTasks]})
+    setTasks((prevTasks) => { return [{ text: text, key: Math.random().toString() }, ...prevTasks] })
 
   }
 
@@ -23,7 +23,7 @@ const App = () => {
     <View style={styles.container}>
       <Header />
       <View style={styles.content}>
-        <AddToDo handleSubmit={handleSubmit}/>
+        <AddToDo handleSubmit={handleSubmit} />
         <View style={styles.list}>
           <FlatList
             data={tasks}

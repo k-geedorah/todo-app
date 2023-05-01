@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text,TextInput, Button } from 'react-native';
+import { View, StyleSheet, TextInput, Button } from 'react-native';
 import React, { useState } from 'react';
 export default function AddToDo({handleSubmit}){
     const [text,setText]=useState('');
